@@ -5,3 +5,7 @@ export const Increment = () => {
 export const Decrement = () => {
   return { type: 'DECREMENT' };
 };
+
+export const AddName = (newname) => {
+  return { type: 'NAMECHANGE', payload: newname}
+}

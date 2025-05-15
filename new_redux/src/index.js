@@ -7,17 +7,22 @@ import StoreComponent from './components/Store';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ErrorBoundary from './components/ErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-      <ErrorBoundary>
+
+          <ErrorBoundary fallbackRender={({ error }) => (
+            <div>
+              <h1>Something went wrong!</h1>
+              <p>Error: {error.message}</p>
+            </div>
+          )}>
           <Provider store={StoreComponent}>
             <App />
           </Provider>
       </ErrorBoundary>
-  </React.StrictMode>
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function
