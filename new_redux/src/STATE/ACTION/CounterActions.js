@@ -8,4 +8,4 @@ export const Decrement = () => {
 
 export const AddName = (newname) => {
   return { type: 'NAMECHANGE', payload: newname}
-}
+} 

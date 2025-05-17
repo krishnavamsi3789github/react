@@ -1,8 +1,8 @@
 
 import { createStore, applyMiddleware } from 'redux'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import ReducerComponent from './Reducer';
-import ToDoReducer from './ToDoReducer';
+import ReducerComponent from '../REDUCER/Reducer';
+import ToDoReducer from '../REDUCER/ToDoReducer';
 
 const rootReducer = combineReducers({
   todo: ToDoReducer,

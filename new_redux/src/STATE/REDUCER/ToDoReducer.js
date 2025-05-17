@@ -12,7 +12,7 @@ const ToDoReducer = (state=initialstate, action) => {
                 let tempTask = [...state.task];
                 let index = tempTask.indexOf(tasktoremove)
                 if(index !== -1){
-                    tempTask = tempTask.splice(index,1)
+                    tempTask.splice(index,1)
                     return {task:[...tempTask]}
                 } else {
         

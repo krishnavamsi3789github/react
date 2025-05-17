@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import { Provider } from 'react-redux';
-import StoreComponent from './components/Store';
+import StoreComponent from './STATE/STORE/Store.js';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +12,7 @@ import ErrorBoundary from './components/ErrorBoundary.jsx';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-          <ErrorBoundary fallbackRender={({ error }) => (
+      <ErrorBoundary fallbackRender={({ error }) => (
             <div>
               <h1>Something went wrong!</h1>
               <p>Error: {error.message}</p>
